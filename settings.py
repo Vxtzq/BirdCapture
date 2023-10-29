@@ -1,0 +1,20 @@
+import configparser
+
+configParser = configparser.RawConfigParser()   
+configFilePath = r'config.cfg'
+configParser.read(configFilePath)
+sendinit = configParser.get("mail","send_init_mail")
+sendinfo = configParser.get("mail","send_info_mail")
+infointerval = configParser.get("mail","info_mail_interval")
+lang = configParser.get("general","language")
+saverecords = configParser.get("record","save_record_files")
+savelogs = configParser.get("general","save_logs")
+sendlogs = configParser.get("mail","send_logs")
+lattitude = configParser.get("general","lattitude")
+longitude = configParser.get("general","longitude")
+recordlength = configParser.get("record","record_length")
+record_filename = configParser.get("record","record_filename")
+address = configParser.get("mail","address")
+addresspassword = configParser.get("mail","address_password")
+smtpserver = configParser.get("mail","smtp_server")
+receiveremail = configParser.get("mail","receiver")
