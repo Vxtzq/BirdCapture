@@ -1,5 +1,6 @@
 # BirdCapture
-## Designed to work with a raspberry pi
+Designed to work with a raspberry pi
+## Setup
 On raspberry pi (using raspbian) :
 
 Don't forget to enable ssh in settings.
