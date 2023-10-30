@@ -2,7 +2,8 @@
 ## Designed to work with a raspberry pi
 On raspberry pi (using raspbian) :
 
-Clone this repository into /home/pi/
+Clone this repository into /home/pi/ with :
+
 ```git clone https://github.com/proplayer2020/BirdCapture```
 
 ```sudo nano .bash_login```
