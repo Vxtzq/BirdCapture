@@ -1,5 +1,5 @@
 # BirdCapture
-The simplest way to automate bird detection in your garden
+The simplest way to automate bird detection in your garden !
 
 ## Required Materials :
 - A raspberry pi
