@@ -1,5 +1,12 @@
 # BirdCapture
 Designed to work with a raspberry pi
+
+## Required Materials :
+- A raspberry pi
+- A battery
+- An usb microphone or microphone shield
+- A plastic box to fit the rpi pi and the battery (most likely waterproof)
+
 ## Setup
 On raspberry pi (using raspbian) :
 
