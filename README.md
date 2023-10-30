@@ -1,5 +1,5 @@
 # BirdCapture
-Designed to work with a raspberry pi
+The simplest way to automate bird detection in your garden
 
 ## Required Materials :
 - A raspberry pi
