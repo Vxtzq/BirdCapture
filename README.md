@@ -2,6 +2,8 @@
 ## Designed to work with a raspberry pi
 On raspberry pi (using raspbian) :
 
+Don't forget to enable ssh in settings.
+
 Clone this repository into /home/pi/ with :
 
 ```git clone https://github.com/proplayer2020/BirdCapture```
