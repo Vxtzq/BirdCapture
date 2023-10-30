@@ -20,5 +20,5 @@ Or if you have an username :
 
 Replace <user> with the user name.
 
-Do all required changes in config.cfg like enter your lattitude and longitude, email address...
+Do all required changes in ```config.cfg```,enter your lattitude and longitude, email address...
 
