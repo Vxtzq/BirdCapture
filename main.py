@@ -12,10 +12,11 @@ from email.mime.base import MIMEBase
 
 sendInitMail()
 # Load and initialize the BirdNET-Analyzer models.
-logcount = 1
+
+logcount = 0
 detections = []
 def main():
-    global logcount,detections
+    global logcount,detections, timebetween
     analyzer = Analyzer()
     
     while True:
@@ -34,10 +35,10 @@ def main():
 
 
         
-
+        logcount +=1
         if not os.path.exists("logs/log"+str(logcount)+".log"):
             
-            log = open("logs/log"+str(logcount)+".log", "a+")
+            log = open("logs/log"+str(logcount)+".log", "x")
             log.close()
             
            
@@ -48,13 +49,19 @@ def main():
                 detections.append(detect['common_name']+" ,("+str(detect['scientific_name'])+")")
             log.write(str(detect['common_name']+",("+str(detect['scientific_name'])+"),"+str(detect['confidence']))+","+str(date)+"\n")
         log.close()
-        logcount +=1
+        
         print("detections : "+str(detections))
+        print("waiting for "+timebetween+" seconds...")
+        time.sleep(int(timebetween))
 def Mail():
-    global detections
+    global detections,logcount
     while True:
         time.sleep(int(infointerval)*60)
-        sendMail("logs/log"+str(logcount)+".log")
+        if os.path.exists("logs/log"+str(logcount)+".log"):
+            sendMail("logs/log"+str(logcount)+".log")
+        else:
+            sendMail("logs/log"+str(logcount-1)+".log")
+        
 t1 = Thread(target=main)
 t2 = Thread(target=Mail)
 

@@ -29,7 +29,7 @@ def message(log):
     
     birds = []
     if lang == "en":
-        message = "List of birds detected since previous mail :\n"
+        message = "List of birds detected since previous record :\n"
         birdslist = ""
         log = open(log, "r")
         lines = log.readlines()
@@ -54,7 +54,7 @@ def message(log):
                                                         
                 
     if lang == "fr":
-        message = "Liste des oiseau detectés (noms en anglais) :\n"
+        message = "Liste des oiseau detectés depuis le précédent enregistrement (noms en anglais) :\n"
         birdslist = ""
         log = open(log, "r")
         lines = log.readlines()
