@@ -29,4 +29,5 @@ Or if you have an username :
 Replace <user> with the user name.
 
 Do all required changes in ```config.cfg```,enter your lattitude and longitude, email address...
-
+## Optional
+Disable graphic interface of raspbian to reduce power usage.
