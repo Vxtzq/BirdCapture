@@ -9,11 +9,13 @@ import time
 from threading import Thread
 from language import *
 from email.mime.base import MIMEBase
+from synthesis import dofig
 
 sendInitMail()
 # Load and initialize the BirdNET-Analyzer models.
 
 logcount = 0
+logcounter = 0
 detections = []
 def main():
     global logcount,detections, timebetween
@@ -61,14 +63,26 @@ def Mail():
             sendMail("logs/log"+str(logcount)+".log")
         else:
             sendMail("logs/log"+str(logcount-1)+".log")
+def SynthesisMail():
+    global synthesisinterval
+    while True:
+        #time.sleep(int(synthesisinterval)*60*60)
+        logcounter = logcount
+        dofig(logcounter)
         
+        
+
+
 t1 = Thread(target=main)
 t2 = Thread(target=Mail)
+t3 = Thread(target=SynthesisMail)
 
 # start the threads
 t1.start()
 t2.start()
+t3.start()
 
 # wait for the threads to complete
 t1.join()
 t2.join()
+t3.join()

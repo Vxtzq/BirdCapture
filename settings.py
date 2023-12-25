@@ -1,7 +1,7 @@
 import configparser
 
 configParser = configparser.RawConfigParser()   
-configFilePath = '/home/pierre/Documents/BirdCapture/config.cfg'
+configFilePath = 'config.cfg'
 configParser.read(configFilePath)
 sendinit = configParser.get("mail","send_init_mail")
 sendinfo = configParser.get("mail","send_info_mail")
@@ -19,3 +19,5 @@ addresspassword = configParser.get("mail","address_password")
 smtpserver = configParser.get("mail","smtp_server")
 receiveremail = configParser.get("mail","receiver")
 timebetween = configParser.get("record","time_between_records")
+sendsynthesis = configParser.get("mail","send_synthesis_mail")
+synthesisinterval = configParser.get("mail","synthesis_mail_interval")
