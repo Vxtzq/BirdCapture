@@ -8,9 +8,16 @@ The simplest way to automate bird detection in your garden !
 - A plastic box to fit the rpi pi and the battery (most likely waterproof)
 
 ## Setup
-On raspberry pi (using raspbian) :
+On raspberry pi (using raspbian) with working python environement (use raspbian legacy version):
+### Raspberry pi config
 
-Don't forget to enable ssh in settings.
+Enable ssh by going into start menu > Preferences > Raspberry Pi Configuration click on Interfaces and click enable next to SSH and click OK 
+
+Enter ```raspi-config``` in command prompt
+
+Disable graphic interface of raspbian by ssh to reduce power usage, its easy to find either in command line using raspi-config or in raspberry pi settings.
+
+### Repository setup
 
 Clone this repository into /home/pi/ with :
 
@@ -19,15 +26,17 @@ Clone this repository into /home/pi/ with :
 ```sudo nano .bash_login```
 
 In the file write the following : 
-
-```python3 /home/pi/BirdCapture/main.py```
+```cd /home/pi/BirdCapture```
+```python3 main.py```
 
 Or if you have an username :
 
-```python3 /home/<user>/BirdCapture/main.py```
+```cd /home/<user>/BirdCapture```
+```python3 main.py```
+
 
 Replace <user> with the user name.
 
-Do all required changes in ```config.cfg```,enter your lattitude and longitude, email address...
+Do all required changes in ```config.cfg```,enter your lattitude and longitude
 ## Optional
-Disable graphic interface of raspbian by ssh to reduce power usage.
+
