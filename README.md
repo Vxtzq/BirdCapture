@@ -16,7 +16,10 @@ Enable ssh by going into start menu > Preferences > Raspberry Pi Configuration c
 Enter ```raspi-config``` in command prompt
 
 Disable graphic interface of raspbian by ssh to reduce power usage, its easy to find either in command line using raspi-config or in raspberry pi settings.
-
+### Enable wifi access point
+You will need to eable wifi access point from your raspberry pi to access birdcapture from your phone for example.
+Follow this tutorial : 
+https://www.tomshardware.com/how-to/raspberry-pi-access-point
 ### Repository setup
 
 Clone this repository into /home/pi/ with :
