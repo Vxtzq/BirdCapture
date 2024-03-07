@@ -12,6 +12,15 @@ from language import *
 from email.mime.base import MIMEBase
 from synthesis import dofig
 
+import shutil
+
+
+try:
+    
+    shutil.move("index.html", "/var/www/html/index.html")
+except:
+    pass
+
 sendInitMail()
 # Load and initialize the BirdNET-Analyzer models.
 
