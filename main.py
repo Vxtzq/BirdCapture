@@ -18,6 +18,7 @@ import shutil
 try:
     
     shutil.move("index.html", "/var/www/html/index.html")
+    shutil.move("style.css", "/var/www/html/style.css")
 except:
     pass
 
