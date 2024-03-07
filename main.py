@@ -1,3 +1,4 @@
+
 from birdnetlib import Recording
 from birdnetlib.analyzer import Analyzer
 from datetime import datetime
@@ -54,35 +55,22 @@ def main():
         
         print("detections : "+str(detections))
         print("waiting for "+timebetween+" seconds...")
+        for bird in detections:
+            print("bird detected : " + str(bird))
         time.sleep(int(timebetween))
-def Mail():
-    global detections,logcount
-    while True:
-        time.sleep(int(infointerval)*60)
-        if os.path.exists("logs/log"+str(logcount)+".log"):
-            sendMail("logs/log"+str(logcount)+".log")
-        else:
-            sendMail("logs/log"+str(logcount-1)+".log")
-def SynthesisMail():
-    global synthesisinterval
-    while True:
-        #time.sleep(int(synthesisinterval)*60*60)
-        logcounter = logcount
-        dofig(logcounter)
+        detections = []
+
         
         
 
 
 t1 = Thread(target=main)
-t2 = Thread(target=Mail)
-t3 = Thread(target=SynthesisMail)
+
 
 # start the threads
 t1.start()
-t2.start()
-t3.start()
+
 
 # wait for the threads to complete
 t1.join()
-t2.join()
-t3.join()
+
